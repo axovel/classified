@@ -1,0 +1,43 @@
+{
+	"name": "cakephp/cakephp",
+	"description": "The CakePHP framework",
+	"type": "library",
+	"keywords": ["framework"],
+	"homepage": "http://cakephp.org",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "CakePHP Community",
+			"homepage": "https://github.com/cakephp/cakephp/graphs/contributors"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/cakephp/cakephp/issues",
+		"forum": "http://stackoverflow.com/tags/cakephp",
+		"irc": "irc://irc.freenode.org/cakephp",
+		"source": "https://github.com/cakephp/cakephp"
+	},
+	"config": {
+	  "vendor-dir": "app/Vendor/",
+	  "preferred-install": "source"
+	},
+	"require": {
+		"php": ">=5.2.8",
+		"ext-mcrypt": "*",
+	    "cakephp/debug_kit": "2.2.*",
+		"burzum/cakephp-imagine-plugin": "dev-master",
+		"imagine/imagine": "dev-master"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "3.7.*",
+		"cakephp/debug_kit" : "2.2.*",
+	},
+	"extra": {
+	  "installer-paths": {
+		"app/Plugin/Imagine": ["burzum/cakephp-imagine-plugin"]
+	  }
+	},
+	"bin": [
+		"lib/Cake/Console/cake"
+	]
+}
