@@ -51,6 +51,7 @@ class AdsController extends AppController {
  */
 	public function add() {
 		if ($this->request->is('post')) {
+                    $this->loadModel('Ad');
 			$this->Ad->create();
 			if ($this->Ad->save($this->request->data)) {
 				$this->Session->setFlash(__('The ad has been saved.'));

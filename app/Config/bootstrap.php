@@ -116,3 +116,4 @@ CakePlugin::load('DebugKit');
 CakePlugin::load('Users',array(
 	'routes' => true
 ));
+CakePlugin::load('Elasticsearch');
