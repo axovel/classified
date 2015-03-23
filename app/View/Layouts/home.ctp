@@ -23,7 +23,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php echo $this->Html->charset(); ?>
 	<title>
 		<?php echo $cakeDescription ?>:
-		<?php echo $this->fetch('title'); ?>
+		<?php echo $this->fetch('title'); 
+                echo $this->Html->script('jquery-1.9.1.min');
+                ?>
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
@@ -225,5 +227,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		</div>
 	</div>
 	<?php echo $this->element('sql_dump'); ?>
+    <?php echo $this->element('Frontend/footer_script');  ?>
 </body>
 </html>

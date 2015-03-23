@@ -31,7 +31,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	echo $this->Html->css('bootstrap');
 	echo $this->Html->css('datepicker/jquery-ui');
 	echo $this->Html->css('font-awesome.min.css');
+        echo $this->Html->css('style');
 	echo $this->Html->css('styles');
+	
 	echo $this->Html->script('jquery-1.9.1.min');
 	echo $this->Html->script('datepicker/jquery-ui');
 	echo $this->Html->script('bootstrap');
@@ -72,6 +74,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	</div>
 </div>
 <?php echo $this->element('sql_dump'); ?>
+<?php echo $this->element('Frontend/footer_script');  ?>
+    
 <script type="text/javascript">
 	jQuery('document').ready(function(){
 		$(".datepicker").datepicker({

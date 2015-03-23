@@ -223,6 +223,7 @@
  * A random string used in security hashing methods.
  */
 	Configure::write('Security.salt', 'DYhG93b0qyJfIxqwxas32asd32vniR2G0FgaC9mi');
+	Configure::write('ROOT_DIRECTORY', '/classified/classified');
 
 /**
  * A random numeric string (digits only) used to encrypt/decrypt strings.

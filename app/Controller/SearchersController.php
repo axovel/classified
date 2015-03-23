@@ -8,7 +8,6 @@
     );
 
     public function searcher () {
-        $this->layout="";
        $this->Searcher->searchAction($this->RequestHandler->isAjax());
     
     }

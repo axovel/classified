@@ -14,8 +14,8 @@
 	</div><!-- query end -->
 	<div class="col-md-6"><!-- col-md-6 start-->
 		<div class="search">
-			<input type="search" value="Search your Product">
-			<button></button>
+			 <input type="search" placeholder="Search your Product" id="searchWindow">
+                            <button id="adSearch"></button>
 		</div>
 	</div><!-- col-md-6 end-->
 
