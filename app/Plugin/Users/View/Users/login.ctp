@@ -18,7 +18,7 @@
 				'action' => 'login',
 				'id' => 'LoginForm'));
 			echo $this->Form->input('email', array(
-				'label' => __d('users', 'Email')));
+				'label' => __d('users', 'Email'),'class'=>""));
 			echo $this->Form->input('password',  array(
 				'label' => __d('users', 'Password')));
 
@@ -31,4 +31,4 @@
 		?>
 	</fieldset>
 </div>
-<?php echo $this->element('Users.Users/sidebar'); ?>
+<?php //echo $this->element('Users.Users/sidebar'); ?>

@@ -600,6 +600,7 @@ class SearchableBehavior extends ModelBehavior {
 
 		// Build Query
 		$payload = $this->query($LeadingModel, $query, $queryParams);
+              //  pr($payload);die;
 //pr($payload);
 		// Custom Elasticsearch CuRL Job
 		$r = $this->execute($LeadingModel, 'GET', '_search', $payload);

@@ -50,12 +50,13 @@ class SearcherComponent extends Component {
 			}
 		}
 
-		$queryParams = array();
+		$queryParams = array('category_id');
 
 		if ($ajax) {
 			$queryParams['limit'] = 100;
 		}
-
+pr($queryParams);
+pr($query);//die;
 		$response = $this->search($query, $queryParams);
 //                echo $query;
 //                pr($queryParams);

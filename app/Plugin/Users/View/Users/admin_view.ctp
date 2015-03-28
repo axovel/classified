@@ -1,32 +1,27 @@
-<?php
-/**
- * Copyright 2010 - 2014, Cake Development Corporation (http://cakedc.com)
- *
- * Licensed under The MIT License
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright Copyright 2010 - 2014, Cake Development Corporation (http://cakedc.com)
- * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
- */
-?>
+<style>    
+    .span_label{float:left;min-width:200px;}
+    .span_value{}
+</style>
 <div class="users view">
-	<h2><?php echo __d('users', 'User'); ?></h2>
-	<dl><?php $i = 0; $class = ' class="altrow"'; ?>
-		<dt<?php if ($i % 2 == 0) echo $class; ?>><?php echo __d('users', 'Username'); ?></dt>
-		<dd<?php if ($i++ % 2 == 0) echo $class; ?>>
-			<?php echo $user[$model]['username']; ?>
-			&nbsp;
-		</dd>
-		<dt<?php if ($i % 2 == 0) echo $class; ?>><?php echo __d('users', 'Created'); ?></dt>
-		<dd<?php if ($i++ % 2 == 0) echo $class; ?>>
-			<?php echo $user[$model]['created']; ?>
-			&nbsp;
-		</dd>
-		<dt<?php if ($i % 2 == 0) echo $class; ?>><?php echo __d('users', 'Modified'); ?></dt>
-		<dd<?php if ($i++ % 2 == 0) echo $class; ?>>
-			<?php echo $user[$model]['modified']; ?>
-			&nbsp;
-		</dd>
-	</dl>
+    
+<h2><?php echo __('User'); ?></h2>
+
+                <p>
+		<span class="span_label"><strong><?php echo __('Username'); ?></strong></span>
+		<span class="span_value"><?php echo h($user[$model]['username']); ?>	&nbsp;</span>
+                </p> <br>
+                
+                <p>
+		<span class="span_label"><strong><?php echo __('Email'); ?></strong></span>
+		<span class="span_value"><?php echo h($user[$model]['email']); ?>	&nbsp;</span>
+                </p> <br>
+                
+                <p>
+		<span class="span_label"><strong><?php echo __('Created'); ?></strong></span>
+		<span class="span_value"><?php echo h($user[$model]['created']); ?>	&nbsp;</span>
+                </p> <br>
+                <p>
+		<span class="span_label"><strong><?php echo __('Modified'); ?></strong></span>
+		<span class="span_value"><?php echo h($user[$model]['modified']); ?>	&nbsp;</span>
+                </p> <br>
 </div>
-<?php echo $this->element('Users.Users/admin_sidebar'); ?>

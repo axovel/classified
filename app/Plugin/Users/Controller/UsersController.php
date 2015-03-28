@@ -302,6 +302,7 @@ class UsersController extends UsersAppController {
  * @return void
  */
 	public function admin_index() {
+            $this->layout="admin";
 		if ($this->{$this->modelClass}->Behaviors->loaded('Searchable')) {
 			$this->Prg->commonProcess();
 			unset($this->{$this->modelClass}->validate['username']);
@@ -327,6 +328,7 @@ class UsersController extends UsersAppController {
  * @return void
  */
 	public function admin_view($id = null) {
+            $this->layout="admin";
 		try {
 			$user = $this->{$this->modelClass}->view($id, 'id');
 		} catch (NotFoundException $e) {
@@ -343,6 +345,7 @@ class UsersController extends UsersAppController {
  * @return void
  */
 	public function admin_add() {
+             $this->layout="admin";
 		if (!empty($this->request->data)) {
 			$this->request->data[$this->modelClass]['tos'] = true;
 			$this->request->data[$this->modelClass]['email_verified'] = true;
@@ -362,6 +365,7 @@ class UsersController extends UsersAppController {
  * @return void
  */
 	public function admin_edit($userId = null) {
+            $this->layout="admin";
 		try {
 			$result = $this->{$this->modelClass}->edit($userId, $this->request->data);
 			if ($result === true) {
@@ -451,6 +455,7 @@ class UsersController extends UsersAppController {
  * @return void
  */
 	public function login() {
+            $this->layout="";
 		$Event = new CakeEvent(
 			'Users.Controller.Users.beforeLogin',
 			$this,

@@ -7,7 +7,7 @@
 
 		<div class="right-bar"><!-- right bar start -->
 			<div class="log">
-				<?php echo $this->Html->link('Login |','/users/login')?>
+				<?php echo $this->Html->link('Login |','/users/login',array('class'=>"emp"))?>
 				<?php echo $this->Html->link('Register','/users/add')?>
 			</div>
 			<div class="social-link">

@@ -1,34 +1,52 @@
-<?php
-/**
- * Copyright 2010 - 2014, Cake Development Corporation (http://cakedc.com)
- *
- * Licensed under The MIT License
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright Copyright 2010 - 2014, Cake Development Corporation (http://cakedc.com)
- * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
- */
-?>
-<div class="users form">
+
+<div class="row">
+    <div class="box col-md-12">
+        <div class="box-inner">
+            <div class="box-header well" data-original-title="">
+                <h2><i class="glyphicon glyphicon-edit"></i> Edit User </h2>
+                <div class="box-icon">
+                    <a href="#" class="btn btn-setting btn-round btn-default"><i
+                            class="glyphicon glyphicon-cog"></i></a>
+                    <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                            class="glyphicon glyphicon-chevron-up"></i></a>
+                    <a href="#" class="btn btn-close btn-round btn-default"><i
+                            class="glyphicon glyphicon-remove"></i></a>
+                </div>
+            </div>
+             
+            <div class="box-content">
 	<?php echo $this->Form->create($model); ?>
-		<fieldset>
-			<legend><?php echo __d('users', 'Edit User'); ?></legend>
+		
 			<?php
-				echo $this->Form->input('id');
+				echo $this->Form->input('id'); ?>
+                        </div>
+                 <div class="form-group">
+                    <label for="Username">Username</label>
+                        <?php 
 				echo $this->Form->input('username', array(
-					'label' => __d('users', 'Username')));
+										'label' => false,'class'=>'form-control'));?>
+                    </div>
+                     <div class="form-group">
+                    <label for="Username">Username</label>
+                        <?php 
 				echo $this->Form->input('email', array(
-					'label' => __d('users', 'Email')));
+					'label' => false,'class'=>'form-control'));?>
+                    </div>
+                        <?php 
 				if (!empty($roles)) {
 					echo $this->Form->input('role', array(
 						'label' => __d('users', 'Role'), 'values' => $roles));
-				}
+				} ?>
+                        <?php 
 				echo $this->Form->input('is_admin', array(
-						'label' => __d('users', 'Is Admin')));
+						'label' => __d('users', 'Is Admin'))); ?>
+                        <?php
 					echo $this->Form->input('active', array(
 						'label' => __d('users', 'Active')));
 			?>
 		</fieldset>
 	<?php echo $this->Form->end('Submit'); ?>
 </div>
-<?php echo $this->element('Users.Users/admin_sidebar'); ?>
+</div>
+</div>
+</div>
